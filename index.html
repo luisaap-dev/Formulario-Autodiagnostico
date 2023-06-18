@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de Autodiagnóstico">
+  <title>Formulario de Autodiagnóstico</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <!-- Contenido del encabezado -->
+  </header>
+
+  <nav>
+    <!-- Contenido de la navegación -->
+  </nav>
+
+  <main>
+    <div class="container d-flex justify-content-center align-items-center hospital-bg">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title text-center text-blue h1-formulario">Formulario de Autodiagnóstico</h1>
+          <div class="row">
+            <div class="col-3">
+              <ul class="nav flex-column nav-pills" id="pills-tab" role="tablist" aria-label="Pestañas del formulario">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-personal-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-personal" type="button" role="tab" aria-controls="pills-personal"
+                    aria-selected="true">Datos Personales</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-sintomas-tab" data-bs-toggle="pill" data-bs-target="#pills-sintomas"
+                    type="button" role="tab" aria-controls="pills-sintomas" aria-selected="false">Síntomas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-observaciones-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-observaciones" type="button" role="tab" aria-controls="pills-observaciones"
+                    aria-selected="false">Observaciones</button>
+                </li>
+              </ul>
+            </div>
+            <div class="col-9 ">
+              <div class="tab-content w-100" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-personal" role="tabpanel"
+                  aria-labelledby="pills-personal-tab">
+                  <form id="formulario-personal" onsubmit="return validarFormularioPersonal();" class="row g-3">
+                    <div class="col-md-6">
+                      <label for="nombre" class="form-label text-blue">Nombre:</label>
+                      <input type="text" id="nombre" class="form-control" required aria-label="Nombre">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="apellidos" class="form-label text-blue">Apellidos:</label>
+                      <input type="text" id="apellidos" class="form-control" required aria-label="Apellidos">
+                    </div>
+                    <div class="col-12">
+                      <label for="nif" class="form-label text-blue">NIF:</label>
+                      <input type="text" id="nif" class="form-control" required aria-label="NIF">
+                    </div>
+                    <div class="col-12">
+                      <label for="email" class="form-label text-blue">Email:</label>
+                      <input type="email" id="email" class="form-control" aria-label="Email">
+                    </div>
+                    <div class="col-12">
+                      <label for="telefono" class="form-label text-blue">Teléfono:</label>
+                      <input type="tel" id="telefono" class="form-control" aria-label="Teléfono">
+                    </div>
+                    <div class="col-12">
+                      <fieldset>
+                        <legend class="form-label text-blue">Sexo:</legend>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="sexo" id="sexo_hombre" value="hombre"
+                            aria-label="Hombre">
+                          <label class="form-check-label text-blue" for="sexo_hombre">Hombre</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="sexo" id="sexo_mujer" value="mujer"
+                            aria-label="Mujer">
+                          <label class="form-check-label text-blue" for="sexo_mujer">Mujer</label>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="col-12">
+                      <label for="fecha_nacimiento" class="form-label text-blue">Fecha de Nacimiento:</label>
+                      <input type="date" id="fecha_nacimiento" class="form-control" required
+                        aria-label="Fecha de Nacimiento">
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="pills-sintomas" role="tabpanel" aria-labelledby="pills-sintomas-tab">
+                  <form id="formulario-sintomas" onsubmit="return validarFormularioSintomas();" class="row g-3">
+                    <div class="col-12">
+                      <label class="form-label text-blue">Síntomas:</label><br>
+                      <div class="form-check">
+                        <input type="checkbox" name="sintomas[]" value="fiebre" class="form-check-input"
+                          aria-label="Fiebre">
+                        <label class="form-check-label text-blue" for="sintoma_fiebre">Fiebre</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" name="sintomas[]" value="perdida_gusto_olfato" class="form-check-input"
+                          aria-label="Pérdida del gusto o olfato">
+                        <label class="form-check-label text-blue" for="sintoma_perdida_gusto_olfato">Pérdida del gusto o
+                          olfato</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" name="sintomas[]" value="dolor_muscular" class="form-check-input"
+                          aria-label="Dolor muscular">
+                        <label class="form-check-label text-blue" for="sintoma_dolor_muscular">Dolor muscular</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" name="sintomas[]" value="dificultad_respirar" class="form-check-input"
+                          aria-label="Dificultad para respirar">
+                        <label class="form-check-label text-blue" for="sintoma_dificultad_respirar">Dificultad para
+                          respirar</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" name="sintomas[]" value="presencia_mucosas" class="form-check-input"
+                          aria-label="Presencia de mucosas">
+                        <label class="form-check-label text-blue" for="sintoma_presencia_mucosas">Presencia de
+                          mucosas</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" name="sintomas[]" value="inflamacion_garganta" class="form-check-input"
+                          aria-label="Inflamación de garganta">
+                        <label class="form-check-label text-blue" for="sintoma_inflamacion_garganta">Inflamación de
+                          garganta</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="frecuencia" class="form-label text-blue">Frecuencia de síntomas:</label>
+                      <select id="frecuencia" class="form-select" disabled aria-label="Frecuencia de síntomas">
+                        <option value="diaria">Diaria</option>
+                        <option value="semanal">Semanal</option>
+                        <option value="mensual">Mensual</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="pills-observaciones" role="tabpanel"
+                  aria-labelledby="pills-observaciones-tab">
+                  <form id="formulario-observaciones" onsubmit="return validarFormularioObservaciones();" class="row g-3">
+                    <div class="col-12">
+                      <label for="observaciones" class="form-label text-blue">Observaciones:</label>
+                      <textarea id="observaciones" class="form-control" aria-label="Observaciones"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary" onclick="enviarFormularios()">Enviar</button>
+  
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Contenido del pie de página -->
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/js.js" aria-hidden="true"></script>
+</body>
+
+</html>
