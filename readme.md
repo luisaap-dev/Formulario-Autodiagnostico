@@ -1,20 +1,42 @@
-# Contenido de la Carpeta
+# Formulario de Autodiagnóstico
 
-Esta carpeta contiene los siguientes archivos y carpetas:
+Este repositorio contiene el código fuente para un formulario de autodiagnóstico diseñado para recopilar información personal, síntomas y observaciones relacionadas con la salud. A continuación, se proporciona una descripción general de la estructura del proyecto y las principales características del formulario.
 
-- **css**: Esta carpeta contiene los estilos del formulario.
-- **js**: Esta carpeta contiene las validaciones del formulario.
-- **index.html**: Este archivo muestra el formulario.
-- **resultado-test-accesibilidad.png**: Esta imagen muestra los resultados del test de accesibilidad.
+## Contenido del Repositorio
 
-## CSS
+- **css**: Carpeta que contiene los estilos CSS utilizados en el formulario.
+  - **styles.css**: Estilos personalizados.
+- **js**: Archivo JavaScript utilizado para la validación y envío del formulario.
+  - **js.js**: Funcionalidades interactivas y lógica del formulario.
+- **README.md**: Este archivo que proporciona información sobre el proyecto.
 
-La carpeta **css** contiene los estilos del formulario. Aquí se encuentran los archivos CSS que definen la apariencia y diseño del formulario.
+## Estructura del Formulario
 
-## JS
+- **Encabezado (`header`)**: Sección que puede contener información adicional sobre el formulario o el propósito del mismo.
+- **Navegación (`nav`)**: Sección para la navegación, aunque en este formulario se muestra como un contenedor vacío.
+- **Contenido Principal (`main`)**: Contiene el formulario de autodiagnóstico dividido en pestañas.
+  - **Datos Personales**: Información básica del usuario.
+  - **Síntomas**: Selección de síntomas y frecuencia.
+  - **Observaciones**: Espacio para observaciones adicionales.
+- **Pie de Página (`footer`)**: Sección que puede contener información adicional o enlaces relevantes.
+- **Scripts JavaScript**: Se incluyen scripts para la funcionalidad del formulario y para utilizar Bootstrap.
 
-La carpeta **js** contiene las validaciones del formulario. Aquí se encuentran los archivos JavaScript que se encargan de validar y procesar los datos ingresados en el formulario.
+## Tecnologías Utilizadas
 
-## index.html
+- **HTML5**: Estructura del formulario.
+- **CSS3**: Estilos y diseño.
+- **Bootstrap 5.2.1**: Framework CSS para el diseño responsivo.
+- **JavaScript (Bootstrap JS y script personalizado)**: Validación y funcionalidad interactiva del formulario.
 
-El archivo **index.html** es el punto de entrada de la aplicación y muestra el formulario al usuario. Aquí se encuentran los campos y elementos necesarios para que el usuario complete la información requerida.
+## Instrucciones de Despliegue
+
+1. Clona el repositorio: `git clone https://github.com/luisaap-dev/formulario-autodiagnostico.git`
+2. Abre el archivo `index.html` en tu navegador web.
+3. Completa el formulario con la información solicitada.
+4. Haz clic en el botón "Enviar" para procesar la información.
+
+## Nota Importante
+
+Este formulario es solo una herramienta de autodiagnóstico y no reemplaza la evaluación de un profesional de la salud. Si experimentas síntomas graves, busca asistencia médica de inmediato.
+
+¡Gracias por utilizar nuestro formulario de autodiagnóstico!
