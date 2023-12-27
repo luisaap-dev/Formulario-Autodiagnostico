@@ -35,8 +35,4 @@ Este repositorio contiene el código fuente para un formulario de autodiagnósti
 3. Completa el formulario con la información solicitada.
 4. Haz clic en el botón "Enviar" para procesar la información.
 
-## Nota Importante
-
-Este formulario es solo una herramienta de autodiagnóstico y no reemplaza la evaluación de un profesional de la salud. Si experimentas síntomas graves, busca asistencia médica de inmediato.
-
 ¡Gracias por utilizar nuestro formulario de autodiagnóstico!
